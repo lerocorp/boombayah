@@ -36,7 +36,7 @@ public class RetoBackend {
     }
 
     @PostMapping(value = "/post")
-    public String obtenerReestructuracion(Model model){
+    public String obtenerReestructuracion(){
         Client url = Client.create();
         WebResource recurso = url.resource(ruta);
         Trama[] json =  gson.fromJson(recurso.header("head","head")
